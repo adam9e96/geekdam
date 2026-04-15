@@ -1,0 +1,11 @@
+ktor:
+    application:
+        modules:
+            - dev.adam9e96.geekdam.application.AppModuleKt.module
+    deployment:
+        port: 8081
+
+geekdam:
+    nasa:
+        api-key-env: NASA_API_KEY
+        base-url: https://api.nasa.gov

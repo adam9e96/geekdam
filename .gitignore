@@ -1,0 +1,73 @@
+# Private notes
+_private/
+docs
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Gradle / Kotlin
+.gradle/
+**/.gradle/
+**/.gradle-user-home/
+**/.kotlin/
+**/build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Java / Kotlin artifacts
+*.class
+*.jar
+*.war
+
+# Keep Gradle wrapper jar tracked
+!**/gradle/wrapper/gradle-wrapper.jar
+
+# IDE / editor
+.idea/
+**/.idea/
+.vscode/
+*.iws
+*.iml
+*.ipr
+out/
+**/out/
+*.sublime-project
+*.sublime-workspace
+
+# Spring / Eclipse / STS leftovers
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# Node / frontend
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+coverage/
+**/coverage/
+
+# OS / temp / logs
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Archives / binaries
+*.zip
+*.tar.gz
+*.7z
+*.exe
+*.dll
