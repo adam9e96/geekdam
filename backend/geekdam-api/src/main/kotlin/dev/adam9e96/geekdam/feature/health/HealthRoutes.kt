@@ -1,6 +1,7 @@
 package dev.adam9e96.geekdam.feature.health
 
-import io.ktor.server.response.respondText
+import dev.adam9e96.geekdam.feature.health.dto.HealthResponse
+import io.ktor.server.response.respond
 import io.ktor.server.routing.get
 import io.ktor.server.routing.Route
 
@@ -9,6 +10,10 @@ import io.ktor.server.routing.Route
  */
 fun Route.healthRoutes() {
     get("/health") {
-        call.respondText("ok")
+        call.respond(
+            HealthResponse(
+                status = "ok",
+            ),
+        )
     }
 }

@@ -3,6 +3,7 @@ package dev.adam9e96.geekdam.infrastructure.nasa
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.plugins.contentnegotiation.*
+import io.ktor.client.plugins.HttpTimeout
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
 
@@ -14,6 +15,13 @@ object NasaHttpClientFactory {
 
     fun create(): HttpClient =
         HttpClient(CIO) {
+            install(HttpTimeout) {
+                // 서버 기동 직후 첫 외부 호출이 불안정할 수 있어 타임아웃을 명시적으로 둡니다.
+                requestTimeoutMillis = 10_000
+                connectTimeoutMillis = 5_000
+                socketTimeoutMillis = 10_000
+            }
+
             install(ContentNegotiation) {
                 json(
                     Json {

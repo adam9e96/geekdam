@@ -6,6 +6,8 @@ ktor:
         port: 8081
 
 geekdam:
+    database:
+        sqlite-path: ./data/geekdam.db
     nasa:
         api-key-env: NASA_API_KEY
         base-url: https://api.nasa.gov

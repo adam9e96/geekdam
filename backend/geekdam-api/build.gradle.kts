@@ -32,6 +32,12 @@ dependencies {
     implementation(libs.ktor.client.content.negotiation)
     implementation(libs.logback.classic)
     implementation(libs.ktor.server.config.yaml)
+    implementation("org.jetbrains.exposed:exposed-core:0.61.0")
+    implementation("org.jetbrains.exposed:exposed-jdbc:0.61.0")
+    implementation("org.xerial:sqlite-jdbc:3.45.1.0") // SQLite Driver
+    implementation("com.h2database:h2:2.3.232")
+
+
     testImplementation(libs.ktor.server.test.host)
     testImplementation(libs.kotlin.test.junit)
 }
